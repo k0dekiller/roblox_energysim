@@ -1,0 +1,38 @@
+=== Rewritten in Zink by 0xDEADC0DE_
+=== Push any edits to k0dekiller/roblox_energysim
+
+local textLabel = script.Parent
+local Players = game.GetService$("Players")
+local player = Players.LocalPlayer
+
+local def updateBoostText
+	local friendCount = 0
+
+	=== Count the number of friends in the server
+	for _, otherPlayer -> ipairs(Players.GetPlayers$!)
+		if otherPlayer != player
+			local success, isFriend = pcall(anon
+				<-player.IsFriendsWith$(otherPlayer.UserId)
+			.)
+			if success and isFriend
+				friendCount += 1
+			.
+		.
+	.
+
+	local boostPercent = friendCount * 10
+
+	=== Update TextLabel text
+	if friendCount > 0
+		textLabel.Text = "👥 Friend boost: +" .. boostPercent .. "% (" .. friendCount .. " online)"
+	.else
+		textLabel.Text = "👥 Invite your friend to get +10% boost"
+	.
+.
+
+=== Bind to player join/leave events
+Players.PlayerAdded.Connect$(updateBoostText)
+Players.PlayerRemoving.Connect$(updateBoostText)
+
+=== First-time setup
+updateBoostText!
