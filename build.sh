@@ -9,4 +9,4 @@ while IFS= read -r -d '' file; do
     args+=("$file" "$out")
 done < <(find "$folder" -type f -name "*.z" -print0)
 
-z --lang lua --verbose --pretty "${args[@]}"
+python -m zlang --lang lua --verbose --pretty "${args[@]}"
