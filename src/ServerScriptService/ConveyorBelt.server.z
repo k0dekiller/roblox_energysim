@@ -4,7 +4,7 @@
 local Workspace = game.GetService$("Workspace")
 local RunService = game.GetService$("RunService")
 
-local CONVEYOR_SPEED = 20
+local CONVEYOR_SPEED = 40
 
 local def setupConveyor(part)
 	if not part.IsA$("BasePart") or part.Name != "Conveyor"; <-;.
