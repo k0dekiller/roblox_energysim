@@ -13,9 +13,9 @@ local def setupConveyor(part)
 .
 
 local def applyVelocities
-	local camm = Workspace.FindFirstChild$("conveyors")
-	if not camm; <-;.
-	for _, desc -> ipairs(camm.GetDescendants$!) 
+	local c = Workspace.FindFirstChild$("conveyors")
+	if not c; <-;.
+	for _, desc -> ipairs(c.GetDescendants$!)
 		if desc.IsA$("BasePart")
 			desc.AssemblyLinearVelocity = desc.CFrame.LookVector * CONVEYOR_SPEED
 		.
@@ -23,12 +23,12 @@ local def applyVelocities
 .
 
 === Setup
-local camm = Workspace.FindFirstChild$("conveyors")
-if camm
-	for _, desc -> ipairs(camm.GetDescendants$!) 
+local c = Workspace.FindFirstChild$("conveyors")
+if c
+	for _, desc -> ipairs(c.GetDescendants$!)
 		setupConveyor(desc)
 	.
-	camm.DescendantAdded.Connect$(setupConveyor)
+	c.DescendantAdded.Connect$(setupConveyor)
 .
 
 === Keep the velocities
