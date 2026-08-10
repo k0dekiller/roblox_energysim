@@ -1,0 +1,1 @@
+find src -type f -name "*.luau" ! -path "*/_*/*" ! -name "_*" -delete
