@@ -4,3 +4,10 @@
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+
+# Built luau files
+*.luau
+
+# Still include source luau files
+!**/_*/**/*.luau
+!_*.luau
