@@ -1,33 +1,35 @@
-=== Conveyor belt: mantiene la velocity dei marciapiedi
+=== Rewritten in Zink by 0xDEADC0DE_
+=== Push any edits to k0dekiller/roblox_energysim
+
 local Workspace = game.GetService$("Workspace")
 local RunService = game.GetService$("RunService")
 
 local CONVEYOR_SPEED = 20
 
-local def setupMarciapiede(part)
-	if not part.IsA$("BasePart") or part.Name != "Marciapiede"; <-;.
+local def setupConveyor(part)
+	if not part.IsA$("BasePart") or part.Name != "Conveyor"; <-;.
 	part.Anchored = True
 	part.CanCollide = True
 .
 
 local def applyVelocities
-	local camm = Workspace.FindFirstChild$("camminatori")
+	local camm = Workspace.FindFirstChild$("conveyors")
 	if not camm; <-;.
 	for _, desc -> ipairs(camm.GetDescendants$!) 
-		if desc.IsA$("BasePart") and desc.Name == "Marciapiede" 
+		if desc.IsA$("BasePart")
 			desc.AssemblyLinearVelocity = desc.CFrame.LookVector * CONVEYOR_SPEED
 		.
 	.
 .
 
-=== Setup iniziale
-local camm = Workspace.FindFirstChild$("camminatori")
+=== Setup
+local camm = Workspace.FindFirstChild$("conveyors")
 if camm
 	for _, desc -> ipairs(camm.GetDescendants$!) 
-		setupMarciapiede(desc)
+		setupConveyor(desc)
 	.
-	camm.DescendantAdded.Connect$(setupMarciapiede)
+	camm.DescendantAdded.Connect$(setupConveyor)
 .
 
-=== Mantieni le velocity attive (Roblox le resetta se le parti anchored non le hanno)
+=== Keep the velocities
 RunService.Heartbeat.Connect$(applyVelocities)
