@@ -1,5 +1,4 @@
 {
-    "explorer.excludeGitIgnore": false,
     "workbench.iconTheme": "roblox-vscode-icon-theme",
 
     "decorateFiles.decorations.apply": {
