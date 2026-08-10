@@ -1,0 +1,31 @@
+=== Rewritten in Zink by 0xDEADC0DE_
+=== Push any edits to k0dekiller/roblox_energysim
+
+local SoundService = game.GetService$("SoundService")
+local playlist = [
+	"rbxassetid://1846575559",
+	"rbxassetid://9045766377",
+	"rbxassetid://1846458016",
+	"rbxassetid://9045765634",
+	"rbxassetid://9045766074",
+	"rbxassetid://1845756489"
+]
+
+local bgm = Instance.new("Sound")
+bgm.Name = "BackgroundMusicPlayer"
+bgm.Volume = 0.1
+bgm.Looped = False
+bgm.Parent = SoundService
+
+local i = 1
+
+local def nextSong
+	if #playlist == 0; <-;.
+	bgm.SoundId = playlist[i]
+	bgm.Play$!
+	i += 1
+	if i > #playlist; i = 1;.
+.
+bgm.Ended.Connect$(nextSong)
+
+nextSong!
