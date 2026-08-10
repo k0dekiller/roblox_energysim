@@ -1,0 +1,28 @@
+{
+    "explorer.excludeGitIgnore": true,
+    "workbench.iconTheme": "roblox-vscode-icon-theme",
+
+    "decorateFiles.decorations.apply": {
+        "enableFolders": true,
+        "enableBadges": true,
+        "enableFilePaths": true,
+        "enableMultirootWorkspaces": true,
+        "enableNonWorkspaceFiles": true,
+        "enableReadonly": true
+    },
+
+    "workbench.colorCustomizations": {
+        "decorateFiles.folderColors": "#ffffff",
+        "decorateFiles.workspaceFolder.1": "#ffffff",
+    },
+
+    "decorateFiles.filePaths": {
+        ".server.z": "#00ff00",
+        ".server.luau": "#00ffff",
+        ".client.z": "#ff7f00",
+        ".client.luau": "#ff7f7f",
+        ".z": "#7fff7f",
+        ".luau": "#7fffff",
+        "settings.json": "#ffff00"
+    }
+}
