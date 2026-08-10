@@ -1,5 +1,5 @@
 {
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "workbench.iconTheme": "roblox-vscode-icon-theme",
 
     "decorateFiles.decorations.apply": {
@@ -24,5 +24,14 @@
         ".z": "#7fff7f",
         ".luau": "#7fffff",
         "settings.json": "#ffff00"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/flutter/ephemeral": true,
+        "**/Flutter/ephemeral": true,
+        "**/.symlinks": true,
+        "**/.plugin_symlinks": true
     }
 }
