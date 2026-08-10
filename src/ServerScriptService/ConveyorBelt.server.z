@@ -1,0 +1,33 @@
+=== Conveyor belt: mantiene la velocity dei marciapiedi
+local Workspace = game.GetService$("Workspace")
+local RunService = game.GetService$("RunService")
+
+local CONVEYOR_SPEED = 20
+
+local def setupMarciapiede(part)
+	if not part.IsA$("BasePart") or part.Name != "Marciapiede"; <-;.
+	part.Anchored = True
+	part.CanCollide = True
+.
+
+local def applyVelocities
+	local camm = Workspace.FindFirstChild$("camminatori")
+	if not camm; <-;.
+	for _, desc -> ipairs(camm.GetDescendants$!) 
+		if desc.IsA$("BasePart") and desc.Name == "Marciapiede" 
+			desc.AssemblyLinearVelocity = desc.CFrame.LookVector * CONVEYOR_SPEED
+		.
+	.
+.
+
+=== Setup iniziale
+local camm = Workspace.FindFirstChild$("camminatori")
+if camm
+	for _, desc -> ipairs(camm.GetDescendants$!) 
+		setupMarciapiede(desc)
+	.
+	camm.DescendantAdded.Connect$(setupMarciapiede)
+.
+
+=== Mantieni le velocity attive (Roblox le resetta se le parti anchored non le hanno)
+RunService.Heartbeat.Connect$(applyVelocities)
