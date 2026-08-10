@@ -1,4 +1,4 @@
-cleanup.sh &&
+./cleanup.sh &&
 
 folder="src"
 args=()
